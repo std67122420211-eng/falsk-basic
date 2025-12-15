@@ -2,10 +2,17 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-  return '<h2>สวัสดีชาวโลก<h2>'
+@app.route("/")
+def home():
+    return "Home Page"
 
-if __name__ == '__main__':
-  app.run(debug=True)
-  
+@app.route("/about")
+def about():
+    return "About Page"
+
+@app.route("/contact")
+def contact():
+    return "Contact Page"
+
+if __name__ == "__main__":
+    app.run()
